@@ -2,10 +2,6 @@
 # Install sway
 sudo apt install sway sway-backgrounds swaybg swayidle swaylock xdg-desktop-portal-wlr xwayland
 
-# Create the sway config
-mkdir -p ~/.config/sway
-cp /etc/sway/config ~/.config/sway
-
 # Install sddm
 sudo apt install --no-install-recommends -y sddm
 sudo systemctl enable sddm
@@ -35,7 +31,7 @@ sudo apt install stow
 
 
 # Install wofi
-sudo apt install libwayland-dev libgtk-2-dev pkgconf meson mercurial -y
+sudo apt install libwayland-dev libgtk-3-dev pkgconf meson mercurial -y
 
 hg clone https://hg.sr.ht/~scoopta/wofi
 cd wofi
