@@ -32,3 +32,17 @@ sudo apt install google-chrome-stable
 
 # Install stow
 sudo apt install stow
+
+
+# Install wofi
+sudo apt install libwayland-dev libgtk-2-dev pkgconf meson mercurial -y
+
+hg clone https://hg.sr.ht/~scoopta/wofi
+cd wofi
+meson setup build
+ninja -C build
+sudo ninja -C build install
+cd ~
+
+# Install waybar
+sudo apt install waybar -y
