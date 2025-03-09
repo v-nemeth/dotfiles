@@ -218,3 +218,26 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+# Focus-based opacity for terminals
+for_window [app_id="kitty"] opacity 0.95
+for_window [app_id="kitty"] focus opacity 0.95
+for_window [app_id=kitty] floating enable
+
+smart_gaps on
+gaps inner 8
+gaps outer 2
+
+default_border none
+default_floating_border pixel 2
+
+client.focused          #4c566a #4c566a #1E1E2E #4c566a #4c566a
+client.focused_inactive #45475A #45475A #CDD6F4 #45475A #45475A
+client.unfocused        #2e3440 #2e3440 #CDD6F4 #2e3440 #2e3440
+client.urgent           #F38BA8 #F38BA8 #1E1E2E #F38BA8 #F38BA8
+
+font pango:JetBrains Mono 11
+
+for_window [floating] border pixel 2
+
+
