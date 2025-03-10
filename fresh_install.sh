@@ -39,3 +39,6 @@ cd ~
 
 # Install waybar
 sudo apt install waybar -y
+
+# Install pulse-audio for audio controls
+sudo apt install pulseaudio -y

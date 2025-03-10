@@ -83,9 +83,11 @@ output * bg $HOME/Pictures/wallpaper.png fill
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
+    set $powermenu $HOME/.config/waybar/scripts/power-menu.sh
+    # Powermenu (logs you out of your Wayland session)
+    bindsym $mod+Shift+e $powermenu
+    #
+
 # Moving around:
 #
     # Move your focus around
@@ -222,7 +224,6 @@ include /etc/sway/config.d/*
 # Focus-based opacity for terminals
 for_window [app_id="kitty"] opacity 0.95
 for_window [app_id="kitty"] focus opacity 0.95
-for_window [app_id=kitty] floating enable
 
 smart_gaps on
 gaps inner 8
@@ -240,4 +241,6 @@ font pango:JetBrains Mono 11
 
 for_window [floating] border pixel 2
 
-
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
