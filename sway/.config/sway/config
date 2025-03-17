@@ -18,7 +18,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show run
+set $menu wofi --show drun
 
 include /etc/sway/config-vars.d/*
 
@@ -85,7 +85,7 @@ output * bg $HOME/Pictures/wallpaper.png fill
 
     set $powermenu $HOME/.config/waybar/scripts/power-menu.sh
     # Powermenu (logs you out of your Wayland session)
-    bindsym $mod+Shift+e $powermenu
+    bindsym $mod+Shift+e exec $powermenu
     #
 
 # Moving around:

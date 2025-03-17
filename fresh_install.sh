@@ -42,3 +42,6 @@ sudo apt install waybar -y
 
 # Install pulse-audio for audio controls
 sudo apt install pulseaudio -y
+
+# Install nautilus for file management
+sudo apt install nautilus -y
