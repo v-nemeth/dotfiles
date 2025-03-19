@@ -14,3 +14,7 @@ sudo apt install build-essential rustc libssl-dev libyaml-dev zlib1g-dev libgmp-
 gem install rails
 
 sudo apt install gdebi -y
+
+sudo gdebi Downloads/Bitwarden-2025.2.1-amd64.deb
+sudo gdebi Downloads/obsidian_1.8.9_amd64.deb
+

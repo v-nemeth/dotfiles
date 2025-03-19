@@ -115,3 +115,6 @@ fi
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$HOME/.asdf/shims:$PATH"
 . <(asdf completion bash)
+
+export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
+

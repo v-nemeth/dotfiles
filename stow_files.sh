@@ -16,3 +16,5 @@ stow -d dotfiles wofi
 
 stow -d dotfiles waybar
 
+stow -d dotfiles downloads
+
