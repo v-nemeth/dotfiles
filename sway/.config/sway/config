@@ -158,9 +158,9 @@ for_window [class="Bitwarden"] {
     focus_on_window_activation focus
 }
 
-exec_always --no-startup-id bash -c "bitwarden & sleep 2 && swaymsg 'workspace number 2'"
+exec_always --no-startup-id bash -c "bitwarden & sleep 2 && swaymsg 'workspace number $ws2'"
 workspace $ws9 output DP-3
-
+workspace $ws1 output HDMI-A-1
 #
 # Layout stuff:
 #
