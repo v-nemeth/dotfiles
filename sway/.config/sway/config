@@ -25,11 +25,38 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/Pictures/wallpaper.png fill
+# output * bg $HOME/Pictures/Fall.png fill
+
+exec_always bash -c 'month=$(date +%-m); \
+if [ "$month" = "12" ] || [ "$month" = "1" ] || [ "$month" = "2" ]; then \
+    if [ -f "$HOME/Pictures/Winter.png" ]; then \
+        swaymsg "output * bg $HOME/Pictures/Winter.png fill"; \
+    else \
+        swaymsg "output * bg $HOME/Pictures/wallpaper.png fill"; \
+    fi; \
+elif [ "$month" = "3" ] || [ "$month" = "4" ] || [ "$month" = "5" ]; then \
+    if [ -f "$HOME/Pictures/Spring.png" ]; then \
+        swaymsg "output * bg $HOME/Pictures/Spring.png fill"; \
+    else \
+        swaymsg "output * bg $HOME/Pictures/wallpaper.png fill"; \
+    fi; \
+elif [ "$month" = "6" ] || [ "$month" = "7" ] || [ "$month" = "8" ]; then \
+    if [ -f "$HOME/Pictures/Summer.png" ]; then \
+        swaymsg "output * bg $HOME/Pictures/Summer.png fill"; \
+    else \
+        swaymsg "output * bg $HOME/Pictures/wallpaper.png fill"; \
+    fi; \
+elif [ "$month" = "9" ] || [ "$month" = "10" ] || [ "$month" = "11" ]; then \
+    if [ -f "$HOME/Pictures/Fall.png" ]; then \
+        swaymsg "output * bg $HOME/Pictures/Fall.png fill"; \
+    else \
+        swaymsg "output * bg $HOME/Pictures/wallpaper.png fill"; \
+    fi; \
+else \
+    swaymsg "output * bg $HOME/Pictures/wallpaper.png fill"; \
+fi'
 #
 # Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
