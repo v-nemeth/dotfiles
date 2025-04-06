@@ -256,3 +256,18 @@ for_window [floating] border pixel 2
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+bindsym $mod+p exec flameshot gui
+
+input "type:keyboard" {
+    xkb_layout us,dk
+    xkb_options "grp:caps_toggle"
+}
+bindsym Shift+XF86MonBrightnessDown exec light -U 5
+bindsym Shift+XF86MonBrightnessUp exec light -A 5
+
+bindsym XF86MonBrightnessDown exec light -U 20
+bindsym XF86MonBrightnessUp exec light -A 20
+
+bindsym $mod+Shift+d exec wdisplays
+bindsym $mod+Shift+b exec blueman-manager

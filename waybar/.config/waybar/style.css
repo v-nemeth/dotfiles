@@ -299,3 +299,49 @@ label:focus {
 #scratchpad.empty {
 	background-color: transparent;
 }
+
+#battery {
+    margin: 5px 5px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: rgba(49, 50, 68, 0.6);
+    color: #a3be8c;
+}
+
+#battery.charging, #battery.plugged {
+    color: #a3be8c;
+    background: rgba(49, 50, 68, 0.6);
+}
+
+#battery.warning:not(.charging) {
+    color: #ebcb8b;
+    background: rgba(49, 50, 68, 0.6);
+}
+
+#battery.critical:not(.charging) {
+    color: #bf616a;
+    background: rgba(49, 50, 68, 0.6);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#language {
+    margin: 5px 5px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: rgba(49, 50, 68, 0.6);
+    color: #88c0d0;
+    min-width: 45px;
+    font-weight: bold;
+}
+
+#backlight {
+    margin: 5px 5px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: rgba(49, 50, 68, 0.6);
+    color: #ebcb8b;
+}

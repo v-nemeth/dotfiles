@@ -59,9 +59,17 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
 sudo apt-get update && sudo apt-get install gnupg2 -y
+
+sudo apt install blueman -y
+
+sudo apt install wdisplays -y
+
+sudo apt install light -y
+sudo usermod -aG video $USER
+

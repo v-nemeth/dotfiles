@@ -117,4 +117,5 @@ export PATH="$HOME/.asdf/shims:$PATH"
 . <(asdf completion bash)
 
 export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
-
+export XDG_CURRENT_DESKTOP="sway"
+export XDG_SESSION_DESKTOP="sway"

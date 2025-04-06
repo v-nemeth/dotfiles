@@ -10,10 +10,35 @@
     "sway/window"
   ],
   "modules-right": [
+    "backlight",
+    "sway/language",
+    "battery",
     "clock#date",
     "clock#time"
   ],
-
+  "backlight": {
+    "format": " {percent}%",
+    "on-scroll-up": "light -A 1",
+    "on-scroll-down": "light -U 1",
+    "smooth-scrolling-threshold": 1,
+    "tooltip": false
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "format-charging": " {capacity}%",
+    "interval": 30,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "tooltip": true
+  },
+  "sway/language": {
+    "format": " {}",
+    "min-length": 5,
+    "tooltip": false
+  },
   "clock#date": {
     "interval": 10,
     "format": " {:%e %b %Y}"
