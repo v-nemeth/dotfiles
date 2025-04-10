@@ -345,3 +345,19 @@ label:focus {
     background: rgba(49, 50, 68, 0.6);
     color: #ebcb8b;
 }
+
+#cpu {
+    margin: 5px 5px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: rgba(49, 50, 68, 0.6);
+    color: #8fbcbb;
+}
+
+#memory {
+    margin: 5px 5px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: rgba(49, 50, 68, 0.6);
+    color: #a3be8c;
+	}

@@ -268,10 +268,11 @@ smart_gaps on
 gaps inner 8
 gaps outer 2
 
-default_border none
+default_border pixel 1
+hide_edge_borders smart
 default_floating_border pixel 2
 
-client.focused          #4c566a #4c566a #1E1E2E #4c566a #4c566a
+client.focused          #4c566a #4c566a #1E1E2E #4c566a #FFFFFF
 client.focused_inactive #45475A #45475A #CDD6F4 #45475A #45475A
 client.unfocused        #2e3440 #2e3440 #CDD6F4 #2e3440 #2e3440
 client.urgent           #F38BA8 #F38BA8 #1E1E2E #F38BA8 #F38BA8
@@ -288,7 +289,7 @@ bindsym $mod+p exec flameshot gui
 
 input "type:keyboard" {
     xkb_layout us,dk
-    xkb_options "grp:caps_toggle"
+    xkb_options "grp:alt_caps_toggle,caps:none"
 }
 bindsym Shift+XF86MonBrightnessDown exec light -U 5
 bindsym Shift+XF86MonBrightnessUp exec light -A 5
@@ -298,3 +299,7 @@ bindsym XF86MonBrightnessUp exec light -A 20
 
 bindsym $mod+Shift+d exec wdisplays
 bindsym $mod+Shift+b exec blueman-manager
+
+bindsym Ctrl+Shift+Print exec grimshot copy area
+bindsym Print exec grimshot copy active
+

@@ -10,12 +10,24 @@
     "sway/window"
   ],
   "modules-right": [
+    "memory",
+    "cpu",
     "backlight",
     "sway/language",
     "battery",
     "clock#date",
     "clock#time"
   ],
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 1
+  },
+  "memory": {
+    "format": " {percentage}%",
+    "tooltip": true,
+    "interval": 1
+  },
   "backlight": {
     "format": " {percent}%",
     "on-scroll-up": "light -A 1",
