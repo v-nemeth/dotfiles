@@ -9,13 +9,12 @@ sudo systemctl enable sddm
 # Install vim
 sudo apt install vim -y
 
+sudo apt install curl -y
+
 # Install kitty + additional dependency
 sudo apt install libwayland-egl1-mesa -y
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 sudo ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten /usr/bin/
-
-# Install curl
-sudo apt install curl -y
 
 # Install chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub > linux_signing_key.pub
@@ -73,3 +72,4 @@ sudo apt install wdisplays -y
 sudo apt install light -y
 sudo usermod -aG video $USER
 
+curl -fsS https://dl.brave.com/install.sh | sh

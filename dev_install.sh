@@ -1,4 +1,4 @@
-#!/bin/bash
+	#!/bin/bash
 #OBS INSTALL BREW MANUALLY FIRST
 
 brew install asdf
